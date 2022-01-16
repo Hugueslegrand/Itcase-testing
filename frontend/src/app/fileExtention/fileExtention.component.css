@@ -1,0 +1,118 @@
+h1{
+	color: #001a70;
+	font-family: AndesBold;
+	font-size: 1.3rem;
+}
+
+p, h1, h2{
+	margin-left: 50px;
+
+}
+/*Styling center call to action*/
+.centerCta{
+	text-align: center;
+	margin-left: 40%;
+	margin-right: 40%;
+	width: 270px;
+}
+
+.centerCta > h2{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-top: 50px;
+}
+
+.centerCta > p{
+	margin-top: 0px;
+	font-family: AndesBook;
+	font-size: 1.1em;
+	color: #001A70;
+	margin-left:0px ;
+}
+
+
+
+h2{
+	margin-top: 10px;
+	color: #001a70;
+	font-family: AndesBold;
+}
+p{
+	margin-top: 35px;
+}
+
+a{
+	text-decoration: none;
+	font-family: AndesBold;
+	color: rgb(0,26,112);
+	border-color: rgb(161,217,220);
+	border-width: 0px 0px 2px 0px;
+	border-style: solid;
+}
+.linkstyle{
+	border-style: none;
+}
+p>a:hover{
+	border-color: #001a70bb;
+	transition: 1s;
+
+}
+
+svg:hover{
+ 	fill:#FFDD55;
+}
+img{
+	height: 30px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	padding: 10px;
+	width: 250px;
+	margin-left: 40%;
+	margin-right: 40%;
+  }
+  
+  .grid-item {
+	margin-bottom: 10px;
+	text-align: center;
+  }
+.buttons{
+	margin-left: 40%;
+	margin-right: 40%;
+	width:250px;
+}
+
+.button {
+	background-color: white;
+	border: solid;
+	color: #001A70;
+	padding: 5px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 10px;
+	font-family: AndesBold;
+}
+
+
+.button:hover {
+	background-color: #FFDD55;
+	border:solid;
+	border-color:#FFDD55;
+	transition-duration: 0.5s;
+	padding: 5px 16px;
+  }
+.backButton{
+	margin-left: 20px;
+}
+
+.exportButton{
+	float: right;
+	border-width: 0px;
+}
+
+  

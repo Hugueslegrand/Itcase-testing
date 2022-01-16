@@ -1,0 +1,42 @@
+h1{
+	color: #001a70;
+	font-family: AndesBold;
+	font-size: 1.3rem;
+}
+
+h1:nth-child(3){
+	margin-top: 40px;
+}
+p, h1, h2{
+	margin-left: 50px;
+
+}
+h2{
+	margin-top: 10px;
+	color: #001a70;
+	font-family: AndesBold;
+}
+p{
+
+	margin-top: 35px;
+}
+
+a{
+	text-decoration: none;
+	font-family: AndesBold;
+	color: rgb(0,26,112);
+	border-color: rgb(161,217,220);
+	border-width: 0px 0px 2px 0px;
+	border-style: solid;
+}
+
+form{
+	margin-left: 50px;
+	border-style: solid;
+}
+
+.alert{
+	color: white;
+	margin-bottom: 15px;
+	text-align: left;
+}

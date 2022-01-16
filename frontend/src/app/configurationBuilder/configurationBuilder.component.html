@@ -1,0 +1,168 @@
+<h2 class="breadCrH2">Configuration Builder</h2>
+<!-- <button (click)="addColumn()">Add Column</button> -->
+<!-- <button (click)="sendArray()">Send Array To Backend</button> -->
+
+<p>
+  <a href="/configurationList">Configuration List</a> >
+  <a href="/overview">Overview</a> >
+  <a href="/configurationBuilder">Configuration Builder</a>
+</p>
+
+<div [formGroup]="form">
+  <div class="form-group">
+    <div class="grid-container-configName">
+      <div class="grid-item-name">
+        <label>
+          <h1>Configuration Name:</h1>
+        </label>
+      </div>
+      <div class="grid-item-name">
+        <input
+          type="text"
+          formControlName="configName"
+          class="form-control inputName"
+          placeholder="Please Name The File"
+        />
+        <!-- validates input to make sure its not empty, if its empty a prompt will appear -->
+        <div
+          class="invalid-feedback inputName"
+        >
+          <div>
+            Filename is required
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+  </div>
+
+  <ng-container formArrayName="rows">
+    
+    <ng-container *ngFor="let rowsForm of rowControls; let i = index">
+
+      <div class="grid-container" [formGroup]="rowsForm">
+
+        <div class="grid-item">
+          <img
+            class="dragIcon"
+            src="/assets/svg/drag.svg"
+            alt="recycle bin icon"
+          />
+        </div>
+
+        <div class="grid-item">
+          <div class="form-group">
+            <mat-form-field class="dropDown" appearance="fill">
+              <mat-label>Source Column</mat-label>
+              <!-- <mat-select placeholder="Client*" #clientValue  (selectionChange)="changeClient($event.value)"></mat-select> -->
+              <mat-select
+                [formControl]="options"
+                multiple
+                (selectionChange)="changeSelect($event.value, i)"
+              >
+                <mat-option
+                  *ngFor="let options of optionsList"
+                  [value]="options"
+                  >{{ options }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- Requests user to input an excel function-->
+        <div class="grid-item">
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="functions"
+              class="form-control inputFunction"
+              placeholder="Define Excel function"
+            />
+            <!-- validates input to make sure its not empty, if its empty a prompt will appear -->
+            <div
+              class="invalid-feedback"
+            >
+              <div>
+                A function is required
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <!-- Requests user to define constants-->
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="constants"
+              class="form-control inputConstant"
+              placeholder="Define constants"
+            />
+            <!-- validates input to make sure its not empty, if its empty a prompt will appear -->
+            <div
+              class="invalid-feedback"
+            >
+              <div >
+                A constant is required
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <!-- Requests user to define target-->
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="target"
+              class="form-control inputTarget"
+              placeholder="Define target"
+            />
+            <!-- validates input to make sure its not empty, if its empty a prompt will appear -->
+            <div
+              class="invalid-feedback"
+            >
+              <div >
+                A target is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" (click)="deleteRow(i)">
+          <img
+            class="deleteIcon"
+            src="/assets/svg/delete.svg"
+            alt="recycle bin icon"
+          />
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      formControlName="ready"
+      class="form-check-input"
+    />
+    <label for="ready" class="form-check-label">Im ready to export</label>
+    <div>
+      Confirm you are done
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+      Next
+    </button>
+  </div>
+
+  <!-- <button (click)="addRow()">ADD</button> -->
+  <button class="button" mat-mini-fab (click)="addRow()">
+    <mat-icon class="add-repeat-btn">+</mat-icon>
+  </button>
+
+  
+</div>

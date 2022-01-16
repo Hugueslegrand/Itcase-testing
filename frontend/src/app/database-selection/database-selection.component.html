@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 class="title">Select Database</h1>
+  <p class="instructions">
+    To continue, please select the database you wish to connect to.<br />
+    If you don't know the database you are supposed to connect to,<br />
+    clarify it with your project manager.
+  </p>
+  <ul class="database-icons">
+    <li class="belgium connector">      
+      <a routerLink="/configurationBuilder" routerLinkActive="active" class="connectorLink" (click)="SelectDatabaseBE()"><img src="../../assets/svg/Belgium.svg" class="connectorImage">Belgium</a>
+    </li>
+    <li class="holland connector">      
+      <a routerLink="/test" routerLinkActive="active" class="connectorLink" (click)="SelectDatabaseNL()"><img src="../../assets/svg/Holland.svg" class="connectorImage">Holland</a>
+    </li> 
+    <li class="poland connector">     
+      <a routerLink="/test" routerLinkActive="active" class="connectorLink" (click)="SelectDatabasePL()"> <img src="../../assets/svg/Poland.svg" class="connectorImage">Poland</a>
+    </li>
+    <li class="uk connector">      
+      <a routerLink="/test" routerLinkActive="active" class="connectorLink" (click)="SelectDatabaseUK()"><img src="../../assets/svg/England.svg" class="connectorImage">United Kingom</a>
+    </li>
+    <li class="japan connector">      
+      <a routerLink="/test" routerLinkActive="active" class="connectorLink" (click)="SelectDatabaseJP()"><img src="../../assets/svg/Japan.svg" class="connectorImage">Japan</a>
+    </li>
+    <li class="usa connector">      
+      <a routerLink="/test" routerLinkActive="active" class="connectorLink" (click)="SelectDatabaseUS()"><img src="../../assets/svg/USA.svg" class="connectorImage">USA</a>
+    </li>
+  </ul>
+</div>
+
+<div class="orb1"></div>
+<div class="orb2"></div>
+<div class="orb3"></div>
+
+<router-outlet></router-outlet>

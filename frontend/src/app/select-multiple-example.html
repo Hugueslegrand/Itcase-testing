@@ -1,0 +1,40 @@
+<p> <a href="/configurationList">Configuration List</a> >
+  <a href="/overview">Overview</a> >
+  <a href="/configurationBuilder">Configuration Builder</a>
+</p>
+
+<h2>Configuration Builder</h2>
+
+<form class="inputName" action="/" method="post">
+  <label for="configName"><h1>Configuration Name:</h1></label>
+  <input type="text" id="configName" name="configName" placeholder="Please Name The File"><br><br>
+</form>
+
+<br>
+
+
+<form  action="/" method="post">
+  <img class="dragIcon" src="/assets/svg/drag.svg" alt="recycle bin icon" style="width:30px;">
+      <section>
+
+          <mat-form-field appearance="fill">
+              <mat-label>options</mat-label>
+              <mat-select [formControl]="options" multiple>
+                <mat-option *ngFor="let options of optionsList" [value]="options">{{options}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+      </section>
+      <section>
+          <input type="text" id="function" name="function" placeholder="Define Here Your Excel Function">
+      </section>
+      <section>
+          <input type="text" id="constants" name="constants" placeholder="Define Constants">
+      </section>
+      <section>
+          <input type="text" id="target" name="target" placeholder="Target Column">
+      </section>
+      <img class="deleteIcon" src="/assets/svg/delete.svg" alt="recycle bin icon" style="width:30px;">
+</form>
+
+<a class="linkstyle" href="/fileextention"><button class="button">Next</button> </a>

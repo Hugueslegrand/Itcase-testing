@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'regular';
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.ttf) format(truetype);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.eot) format(embedded-opentype);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.svg) format(svg);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.ttf) format(truetype);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.eot) format(embedded-opentype);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.svg) format(svg);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.woff) format(woff);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    ". title ."
+    ". instructions ."
+    ". icons .";
+  padding-top: 6rem;
+}
+
+.title {
+  grid-area: title;
+  color: #001a70;
+  text-align: center;
+  font-family: 'bold', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.instructions {
+  grid-area: instructions;
+  text-align: center;
+  font-family: 'regular', sans-serif;
+  font-size: 1.1rem;
+  color: gray;
+  line-height: 140%;
+}
+
+.database-icons {
+  grid-area: icons;
+  justify-self: center;
+  display: grid;
+  grid-template-areas:
+    "belgium holland poland"
+    "uk japan usa";
+  align-content: space-between;
+  list-style-type: none;
+  padding-right: 8rem;
+}
+
+.connector {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.connectorLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #a1d9dc;
+  font-family: 'regular', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.belgium {
+  grid-area: belgium;
+}
+
+.holland {
+  grid-area: holland;
+}
+
+.poland {
+  grid-area: poland;
+}
+
+.uk {
+  grid-area: uk;
+}
+
+.japan {
+  grid-area: japan;
+}
+
+.usa {
+  grid-area: usa;
+}
+
+.connectorImage {
+  height: 5rem;
+  filter: invert(93%) sepia(11%) saturate(881%) hue-rotate(136deg) brightness(90%) contrast(90%);
+  padding-bottom: 1rem;
+}
+
+.orb1{
+  height: 19rem;
+  width: 19rem;
+  background-color: #a1d9dc;
+  border-radius: 100%;
+  position: absolute;
+  right: 20rem;
+  top: -13rem;
+}
+
+.orb2 {
+  height: 19rem;
+  width: 19rem;
+  background-color: #a1d9dc;
+  border-radius: 100%;
+  position: absolute;
+  left: -13rem;
+  bottom: 2rem;
+}
+
+.orb3{
+  height: 35rem;
+  width: 35rem;
+  background-color: #001a70;
+  border-radius: 100%;
+  position: fixed;
+  bottom: -17rem;
+  right: -17rem;
+}

@@ -1,0 +1,16 @@
+<p>show-ta works!</p>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th>tableNames</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataItem of tableList">
+        <td>{{dataItem.tableNames}}</td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          (click)="selectedTable(dataItem)">Select</button>
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,161 @@
+/* Code from Angular Material */
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 18rem;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  margin-left: 10%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* ----------------------------- */
+@font-face {
+  font-family: "regular";
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.ttf) format(truetype);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.eot)
+    format(embedded-opentype);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.svg) format(svg);
+  src: url(/src/assets/font/AndesNeue\ Book/AndesNeue-Book.woff) format(woff);
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.ttf) format(truetype);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.eot)
+    format(embedded-opentype);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.svg) format(svg);
+  src: url(/src/assets/font/AndesNeue\ Bold/AndesNeue-Bold.woff) format(woff);
+}
+a{
+  text-decoration: none;
+}
+
+.mat-list-item {
+  border-radius: 2%;
+  width: auto;
+  margin-left: 10%;
+  margin-right:10%;
+  border-radius: 2.5px;
+  text-align: center;
+}
+
+.mat-list-item:hover {
+  background-color: rgb(161, 217, 220) !important;
+  width: auto;
+  margin-left: 10%;
+  margin-right:10%;
+  text-align: center;
+  border-radius: 2.5px;
+
+}
+
+.databaseImage {
+  height: 4.5rem;
+  filter: invert(15%) sepia(33%) saturate(5460%) hue-rotate(218deg)
+    brightness(79%) contrast(118%);
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+
+.toolbar {
+  display: inline-flex;
+}
+
+.databaseName {
+  font-family: AndesBook;
+  color: rgb(0,26,112) !important;
+  margin-top: 115px;
+  font-style: bold;
+  -webkit-text-stroke: 0.5px rgb(0,26,112);
+}
+
+.navLink {
+  color: #001a70;
+  font-family: AndesBold;
+  font-size: 1.3rem;
+}
+
+.copy {
+  color: rgb(128,128,128);
+  font-family: "regular", sans-serif;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  padding-right: 1.8rem;
+  align-self: center;
+}
+
+.logout {
+  color: #001a70;
+  font-family: "regular", sans-serif !important;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: center;
+  padding-left: 1.5rem;
+}
+
+.navFooter {
+  display: inline-flex;
+  align-items: center !important;
+  border-top-style: solid;
+  border-top-width: 2px;
+  width: 80%;
+  color: rgb(136, 128, 143, 0.1);
+  margin-left: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+}
+
+.orb1 {
+  height: 19rem;
+  width: 19rem;
+  background-color: #a1d9dc;
+  border-radius: 100%;
+  position: absolute;
+  right: 18rem;
+  top: -13rem;
+  z-index: -1;
+}
+
+.orb2 {
+  height: 19rem;
+  width: 19rem;
+  background-color: #a1d9dc;
+  border-radius: 100%;
+  position: absolute;
+  left: -16em;
+  bottom: 5rem;
+  z-index: -1;
+}
+
+.orb3 {
+  height: 35rem;
+  width: 35rem;
+  background-color: #001a70;
+  border-radius: 100%;
+  position: fixed;
+  bottom: -17rem;
+  right: -17rem;
+  z-index: -3;
+}
+
+.mat-body p, .mat-body-1 p, .mat-typography p {
+  margin: 0 0 0px !important;
+}
+.mat-list-base {
+  padding-top: 20px;
+}
+a.mat-list-item.mat-focus-indicator.navLink.active{
+  width: 80%;
+}
+.mat-toolbar-row, .mat-toolbar-single-row,.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  width: 80%!important;
+}
